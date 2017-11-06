@@ -12,7 +12,7 @@
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration artifactName="${ProjName}" buildProperties="" description="" id="cdt.managedbuild.toolchain.gnu.mingw.base.1533537905" name="Build" parent="org.eclipse.cdt.build.core.emptycfg" prebuildStep="${system_path:cmd.exe} /c &quot;cd ${workspace_loc:/DSP-Testbench}/.. &amp; toolchain\runtest.bat ${selected_resource_name}&quot;">
+				<configuration artifactName="${ProjName}" buildProperties="" description="" id="cdt.managedbuild.toolchain.gnu.mingw.base.1533537905" name="Build" parent="org.eclipse.cdt.build.core.emptycfg" prebuildStep="">
 					<folderInfo id="cdt.managedbuild.toolchain.gnu.mingw.base.1533537905.1022254249" name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.mingw.base.2125824258" name="MinGW GCC" superClass="cdt.managedbuild.toolchain.gnu.mingw.base">
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.PE" id="cdt.managedbuild.target.gnu.platform.mingw.base.419701289" name="Debug Platform" osList="win32" superClass="cdt.managedbuild.target.gnu.platform.mingw.base"/>
