@@ -1,6 +1,7 @@
 #include <dsp.h>
 
-int main(int argc, char ** argv) {
+int main(int argc, char ** argv)
+{
 	signal_t * s1 = dsp_signal(0, 256, 1);
 	signal_t * s2_re = dsp_signal(0, 256, 1);
 	signal_t * s2_im = dsp_signal(0, 256, 1);
