@@ -46,17 +46,17 @@ float pid_control(pid_t * pid_handle, float SP, float feedback)
 
 int main(int argc, char ** argv)
 {
-	signal_t * signal_position = dsp_signal(0, 100, 1);
-	signal_t * signal_error = dsp_signal(0, 100, 1);
+	signal_t * signal_position = dsp_signal(0, 1000, 1);
+	signal_t * signal_error = dsp_signal(0, 1000, 1);
 
 	float SP = 10;      /* Set Point                              */
 	float position = 0; /* Simulate the response of this variable */
 
 	/* Create new PID Controller handle */
 	pid_t * pid = pid_new_controller(
-		0.70, /* kp (Proportional constant)    */
-		0.05, /* ki (Integral     constant)    */
-		0.10, /* kd (Derivative   constant)    */
+		0.15, /* kp (Proportional constant)    */
+		0.00, /* ki (Integral     constant)    */
+		0.00, /* kd (Derivative   constant)    */
 		1.00  /* The rate at which time passes */
 	);
 
@@ -68,7 +68,7 @@ int main(int argc, char ** argv)
 		y[xn] = position;
 
 		/* Update PID and simulate feedback response */
-		position += pid_control(pid, SP, position);
+		position += pid_control(pid, SP, position) + (rand() % 2);
 
 		/* Store data (error) */
 		y_error[xn] = pid->error;
